@@ -1,10 +1,5 @@
 pipeline{
   agent any
- environment {
-
-        ProjectName = "Lakeshore"
-
-	}
 
     stages {
     
@@ -12,7 +7,7 @@ pipeline{
      stage('Git Clone'){
         steps{
            cleanWs() 
-           echo "Pipeline of ${ProjectName} project is successfully triggered"
+           echo "Pipeline of project is successfully triggered"
 	}     
      }
    }
