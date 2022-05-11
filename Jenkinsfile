@@ -19,4 +19,6 @@ pipeline{
            cleanWs() 
            echo "Pipeline of ${ProjectName} project is successfully triggered"
 	}     
+     }
+   }
 }
