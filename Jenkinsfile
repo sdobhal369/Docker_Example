@@ -1,10 +1,5 @@
 pipeline{
-  agent { label 'macos' }
-  tools {
-     nodejs "Node"
-     maven "Maven"
-     
- }
+  agent any
  environment {
 
         ProjectName = "Lakeshore"
