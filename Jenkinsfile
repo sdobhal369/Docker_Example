@@ -1,9 +1,5 @@
 pipeline{
   agent any
-	
-   triggers {
-     cron('H H(9-20)/3 * * *')
-   }
 
     stages {
     
@@ -12,6 +8,8 @@ pipeline{
         steps{
            cleanWs() 
            echo "Pipeline of project is successfully triggered"
+           echo $GIT_BRANCH
+           sh 'git name-rev --name-only HEAD' | sed -n 's/.*\/\([^ ]\+\).*/\1/p'
 	}     
      }
    }
