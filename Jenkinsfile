@@ -1,6 +1,5 @@
 pipeline{
   agent any
-
     stages {
     
     
@@ -8,8 +7,8 @@ pipeline{
         steps{
            cleanWs() 
            echo "Pipeline of project is successfully triggered"
-           echo $GIT_BRANCH
-        //   sh " 'git name-rev --name-only HEAD' | sed -n 's/.*\/\([^ ]\+\).*/\1/p' "
+           sh "export GIT_BRANCH = git name-rev --name-only HEAD "
+         //  echo $GIT_BRANCH | sed -n 's/.*\/\([^ ]\+\).*/\1/p' "
 	}     
      }
    }
