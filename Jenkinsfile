@@ -11,7 +11,6 @@ pipeline{
         steps{
            cleanWs() 
            echo "Pipeline of project is successfully triggered"
-	   echo $GIT_BRANCH | sed -n 's/.*\/\([^ ]\+\).*/\1/p'
 	}     
      }
    }
