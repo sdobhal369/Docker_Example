@@ -7,7 +7,7 @@ pipeline{
 
     stages {
     
-     stage('No stage'){
+     stage('Demo stage'){
         steps{
            cleanWs() 
            echo "Pipeline of project is successfully triggered"
