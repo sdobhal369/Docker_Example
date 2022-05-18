@@ -2,12 +2,12 @@ pipeline{
   agent any
 	
    triggers {
-     pollSCM('35 10 * * *')
+     pollSCM('55 10 * * *')
    }
 
     stages {
     
-     stage('Demo stage'){
+     stage('Demo'){
         steps{
            cleanWs() 
            echo "Pipeline of project is successfully triggered"
