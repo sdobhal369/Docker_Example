@@ -7,7 +7,7 @@ pipeline{
 
     stages {
     
-     stage('Git Clone'){
+     stage('Demo stage'){
         steps{
            cleanWs() 
            echo "Pipeline of project is successfully triggered"
