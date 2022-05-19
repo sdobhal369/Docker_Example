@@ -1,17 +1,13 @@
-pipeline{
+pipeline {
   agent any
-	
-   triggers {
-     cron('0 9,16,20 * * *')
-   }
-
-    stages {
     
-     stage('Demo'){
-        steps{
-           cleanWs() 
+  stages {
+    
+     stage('Git Clone'){
+	     steps {
+           cleanWs()
            echo "Pipeline of project is successfully triggered"
-	}     
+	     }     
      }
    }
 }
