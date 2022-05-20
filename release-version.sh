@@ -1,4 +1,3 @@
-
 #!/bin/bash
     git log --first-parent --merges -1 --oneline main > branch_name.txt
     sed -i'' -e 's/.*\///' branch_name.txt
