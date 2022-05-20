@@ -1,7 +1,10 @@
 #!/bin/bash
 
 #get highest tag number
-VERSION=`git describe --tags $(git rev-list --tags --max-count=1)`
+#VERSION=`git describe --tags $(git rev-list --tags --max-count=1)`
+
+sed -n "20p" Info.plist > a.txt 
+VERSION=$(awk -v FS="(<string>|</string>)" '{print $2}' a.txt)
 
 #replace . with space so can split into an array
 VERSION_BITS=(${VERSION//./ })
