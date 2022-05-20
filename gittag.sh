@@ -32,3 +32,7 @@ GIT_COMMIT=`git rev-parse HEAD`
 
     git tag -a $NEW_TAG -m $NEW_TAG
     echo "Tagged with $NEW_TAG"
+    sed -i'' -e "${20}s/"$VERSION"/"$NEW_TAG"/" Info.plist
+    echo "New version Updated"
+    git add .
+    git commit -m "ECMA-5778 : Updated new BuildVersion in Info.plist"
