@@ -10,9 +10,8 @@ function parse_git_branch() {
 
 #Get current branch name
 GIT_BRANCH=$(parse_git_branch)
-BRANCH_REGEX="^(feature/E*)"
 
-if [ $GIT_BRANCH == $BRANCH_REGEX ]
+if [ "$GIT_BRANCH" == .*"^feature/E".* ]
 then
      echo "Hello I am if Condition"
 else
