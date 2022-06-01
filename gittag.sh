@@ -13,7 +13,7 @@ GIT_BRANCH=$(parse_git_branch)
 
 echo $GIT_BRANCH
 
-if [ "$GIT_BRANCH" == *"feature/ECMA"* ]
+if [ "$GIT_BRANCH" == *"ECMA"* ]
 then
      echo "Hello I am if Condition"
 else
