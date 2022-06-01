@@ -1,5 +1,3 @@
-#!/bin/bash
-
 function parse_git_dirty() {
   git diff --quiet --ignore-submodules HEAD 2>/dev/null; [ $? -eq 1 ]
 }
@@ -11,9 +9,14 @@ function parse_git_branch() {
 #Get current branch name
 GIT_BRANCH=$(parse_git_branch) 
 
-if [[ $GIT_BRANCH == "feature/E*/*" ]]
+echo $GIT_BRANCH
+
+if [[ "$GIT_BRANCH" == "feature/ECMA-"* ]]
+
 then
-	echo "Hello I am if Condition"
+     echo "Hello I am if Condition"
+
 else
-  echo "Hello I am else Condition"	
+     echo "Hello I am else Condition"	
+
 fi
