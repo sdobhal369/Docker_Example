@@ -11,9 +11,9 @@ function parse_git_branch() {
 #Get current branch name
 GIT_BRANCH=$(parse_git_branch) 
 
-if [[ $GIT_BRANCH == "feature/E*/*" ]]
+if [[ $GIT_BRANCH == "feature/E*" ]]
 then
-	echo "Hello I am if Condition"
+     echo "Hello I am if Condition"
 else
-  echo "Hello I am else Condition"	
+     echo "Hello I am else Condition"	
 fi
