@@ -9,7 +9,7 @@ function parse_git_branch() {
 }
 
 #Get current branch name
-GIT_BR
+GIT_BRANCH=$(parse_git_branch)
 BRANCH_REGEX="^(feature/E*)"
 
 if [ $GIT_BRANCH == $BRANCH_REGEX ]
