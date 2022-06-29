@@ -1,8 +1,0 @@
-#After using vim command.
-
-#Run Docker build command to build the Dockerfile.
-sudo docker build –t=”mywebserver” . 
-
-#Create a container from the image with Docker run command.
-sudo docker run –d –p 80:80 mywebserver
-
